@@ -1,0 +1,50 @@
+{
+	"schemaVersion": 1,
+	"id": "villagersffh",
+	"version": "${version}",
+	"name": "Villagers: Far From Home",
+	"description": "Clearly, if you have this mod, you're ready for the 1.20.2 villager trade changes! ;)",
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/YDFe9sSByN"
+			}
+		}
+	},
+	"authors": [
+		"atn2k"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/villagers-far-from-home"
+	},
+	"license": "CC BY-ND",
+	"icon": "assets/villagersffh/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"atone.villagersffh.VillagersFFHMain"
+		],
+		"client": [
+			"atone.villagersffh.ExampleModClient"
+		],
+		"fabric-datagen": [
+			"atone.villagersffh.ExampleModDataGenerator"
+		]
+	},
+	"mixins": [
+		"villagersffh.mixins.json",
+		{
+			"config": "villagersffh.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.20",
+		"minecraft": "1.20.X",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
